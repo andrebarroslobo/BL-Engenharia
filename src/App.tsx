@@ -41,7 +41,15 @@ export default function App() {
     <div className="min-h-screen font-sans bg-paper text-ink-900 selection:bg-gold-500 selection:text-white">
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-end items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+          {/* Logo */}
+          <a href="#" className={`flex flex-col justify-center transition-colors ${isScrolled ? 'text-ink-900' : 'text-white'}`}>
+            <div className={`w-full border-t mb-1.5 transition-colors ${isScrolled ? 'border-ink-900/30' : 'border-white/30'}`}></div>
+            <div className="flex items-center">
+              <span className="font-serif text-lg tracking-widest">BL</span>
+            </div>
+          </a>
+
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -121,7 +129,7 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-transparent to-ink-900/80"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-center mt-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-center mt-10 pb-20">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -134,16 +142,13 @@ export default function App() {
                 BL <span className="w-[1px] md:w-[2px] h-6 sm:h-10 md:h-16 bg-white"></span> ENGENHARIA
               </h1>
               <p className="text-white tracking-[0.08em] min-[375px]:tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.3em] uppercase text-[0.5rem] min-[375px]:text-[0.55rem] sm:text-xs md:text-sm text-center">
-                Projetamos sonhos, construímos histórias
+                Excelência em Engenharia, Incorporação e Construção de Alto Padrão
               </p>
             </motion.div>
             
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
-              <a href="https://wa.me/5511942889969" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-ink-900 font-medium uppercase tracking-wider text-sm hover:bg-gold-400 transition-colors text-center">
-                Ver Portfólio
-              </a>
-              <a href="https://wa.me/5511942889969" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-medium uppercase tracking-wider text-sm hover:bg-white hover:text-ink-900 transition-colors backdrop-blur-sm text-center">
-                Fale com nosso time
+              <a href="#portfolio" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-ink-900 font-medium uppercase tracking-wider text-sm hover:bg-gold-400 transition-colors text-center">
+                Conheça nossa Solidez
               </a>
             </motion.div>
           </motion.div>
@@ -186,21 +191,21 @@ export default function App() {
               </motion.h2>
               <motion.div variants={fadeIn} className="space-y-6 text-ink-700/80 font-light leading-relaxed text-left">
                 <p>
-                  Fundada em fevereiro de 1998, na cidade de São Paulo, a BL Engenharia iniciou suas atividades com a execução, administração e gerenciamento de prédios comerciais e residenciais de alto padrão.
+                  Fundada em 1998, em São Paulo, a BL Engenharia construiu sua reputação na execução, administração e gerenciamento de empreendimentos comerciais e residenciais de altíssimo padrão.
                 </p>
                 <p>
-                  Somos uma empresa familiar, formada por dois engenheiros com excelente qualificação no setor, buscando inovações e atualizações constantes para sua obra. Contamos com a experiência de mais de 50 anos dos nossos sócios e inúmeros empreendimentos entregues na cidade de São Paulo.
+                  Comandada por engenheiros com vasta qualificação no setor, unimos a solidez de mais de 50 anos de experiência combinada dos nossos sócios à busca constante por inovação tecnológica e construtiva. Nosso histórico é marcado por entregas rigorosas e parcerias duradouras.
                 </p>
                 <p className="font-medium text-ink-900 border-l-2 border-gold-500 pl-6 py-2 my-8">
-                  "Entre os nossos projetos de destaque estão a execução de obras nos renomados hotéis Renaissance e Unique."
+                  "Nossa capacidade técnica é atestada pela execução de obras complexas e icônicas, como os renomados hotéis Renaissance e Unique."
                 </p>
                 <p>
-                  Fazemos o acompanhamento de perto para tirar as dúvidas quanto à execução, prazo e custo da sua obra. Com isso, o cliente sempre estará tranquilo e atualizado com os próximos passos até o tão esperado dia da entrega das chaves.
+                  Atuamos com total transparência e rigor técnico. Nossa expertise abrange desde a concepção e incorporação até a execução impecável da obra, garantindo segurança jurídica, previsibilidade e rentabilidade para investidores e parceiros, incluindo modelos estruturados de permuta.
                 </p>
               </motion.div>
               <motion.div variants={fadeIn} className="mt-10">
                 <a href="https://wa.me/5511942889969" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-ink-900 font-medium uppercase tracking-wider text-sm hover:bg-gold-400 transition-colors text-center">
-                  Fale com nosso time
+                  Agende uma reunião com a diretoria
                 </a>
               </motion.div>
             </motion.div>
@@ -222,10 +227,10 @@ export default function App() {
               Nossos Serviços
             </motion.span>
             <motion.h2 variants={fadeIn} className="text-3xl md:text-5xl font-serif text-ink-900 mb-6 leading-tight">
-              Entregamos tudo que você precisa
+              Engenharia e Incorporação de Alta Performance
             </motion.h2>
             <motion.p variants={fadeIn} className="text-ink-700/70 font-light text-lg">
-              Da concepção até a finalização da obra, cuidamos de cada detalhe para que você possa entrar no seu novo espaço sem preocupações.
+              Dominamos todas as etapas do ciclo imobiliário, da viabilidade à entrega das chaves, com rigor técnico e excelência construtiva.
             </motion.p>
           </motion.div>
 
@@ -233,18 +238,18 @@ export default function App() {
             {[
               {
                 icon: <Building2 size={32} strokeWidth={1.5} />,
-                title: "Projeto do Início ao Fim",
-                desc: "Nosso time contrata todos os prestadores de serviços e compra os materiais necessários, então você não precisa se preocupar com nada."
+                title: "Construção e Execução de Obras",
+                desc: "Execução rigorosa de projetos de alto padrão, garantindo cumprimento de prazos, controle de custos e qualidade impecável em cada detalhe."
               },
               {
                 icon: <ShieldCheck size={32} strokeWidth={1.5} />,
-                title: "Custo Benefício e Qualidade",
-                desc: "Garantimos o melhor custo-benefício sem comprometer a qualidade. Na BL, você obtém resultados excepcionais com orçamentos ajustados ao seu budget."
+                title: "Incorporação e Desenvolvimento",
+                desc: "Estruturação completa de empreendimentos. Avaliamos viabilidade, desenvolvemos o produto e oferecemos modelos de parceria seguros, incluindo permutas estratégicas."
               },
               {
                 icon: <Users size={32} strokeWidth={1.5} />,
-                title: "Atendimento Exclusivo",
-                desc: "Nossos clientes são nossa prioridade. Atendemos você com eficiência, ética e transparência. Fazemos o acompanhamento de perto."
+                title: "Gestão e Engenharia Consultiva",
+                desc: "Administração transparente e prestação de contas contínua. Nossa equipe técnica garante a mitigação de riscos e a otimização de recursos em todas as fases."
               }
             ].map((service, index) => (
               <motion.div 
@@ -301,11 +306,11 @@ export default function App() {
               
               <div className="space-y-6">
                 {[
-                  "Cuidamos da sua obra do início ao fim, desde o esboço do projeto até a entrega da sua chave.",
-                  "Rápida e eficaz solução para qualquer adversidade que possa surgir durante a execução do seu projeto.",
-                  "Prioridade no atendimento ao cliente, sempre com ética e transparência. Estamos prontos para te atender.",
-                  "O custo-benefício é um dos nossos pilares. Oferecemos qualidade impecável e orçamentos que se ajustam ao seu budget.",
-                  "Equipe tecnicamente qualificada para cuidar de cada etapa do seu projeto com competência."
+                  "Solidez comprovada por um portfólio de obras de altíssimo padrão e complexidade em São Paulo.",
+                  "Domínio completo do ciclo construtivo e de incorporação, maximizando o VGV e a rentabilidade dos projetos.",
+                  "Mitigação de riscos através de rigoroso planejamento financeiro, jurídico e de engenharia.",
+                  "Capacidade técnica atestada por mais de duas décadas de entregas no prazo e com qualidade impecável.",
+                  "Relacionamento direto com os sócios-diretores, garantindo agilidade nas decisões e segurança no negócio."
                 ].map((item, i) => (
                   <motion.div variants={fadeIn} key={i} className="flex gap-4 items-start">
                     <CheckCircle2 className="text-gold-500 shrink-0 mt-1" size={20} />
@@ -315,11 +320,8 @@ export default function App() {
               </div>
 
               <motion.div variants={fadeIn} className="mt-12">
-                <p className="text-xl font-serif italic text-white mb-6">
-                  "Sabe aquele probleminha que rola durante a obra? E aquela surpresa inesperada no meio do caminho? Temos experiência e conhecimento para resolvê-las de forma rápida e eficaz."
-                </p>
                 <a href="https://wa.me/5511942889969" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-ink-900 font-medium uppercase tracking-wider text-sm hover:bg-gold-400 transition-colors text-center">
-                  Solicite um contato do nosso time
+                  Agende uma consultoria técnica
                 </a>
               </motion.div>
             </motion.div>
@@ -342,12 +344,12 @@ export default function App() {
                 Portfólio
               </motion.span>
               <motion.h2 variants={fadeIn} className="text-3xl md:text-5xl font-serif text-ink-900 leading-tight">
-                Sonhos transformados em <span className="italic text-gold-600">realidade</span>
+                Nosso histórico de <span className="italic text-gold-600">solidez e entrega</span>
               </motion.h2>
             </div>
             <motion.div variants={fadeIn}>
               <p className="text-ink-700/70 font-light max-w-md">
-                Confira alguns dos nossos empreendimentos entregues na cidade de São Paulo. Obras de alto padrão executadas com perfeição.
+                Conheça os empreendimentos de alto padrão que atestam nossa capacidade de execução, qualidade construtiva e compromisso com o resultado.
               </p>
             </motion.div>
           </motion.div>
@@ -384,9 +386,6 @@ export default function App() {
                   <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-serif text-2xl mb-2 translate-y-4 group-hover:translate-y-0 text-center px-4">
                     {project.name}
                   </span>
-                  <span className="text-gold-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-medium tracking-widest uppercase text-xs translate-y-4 group-hover:translate-y-0 delay-75">
-                    Ver Projeto
-                  </span>
                 </div>
               </motion.div>
             ))}
@@ -405,10 +404,10 @@ export default function App() {
                   Contato
                 </span>
                 <h2 className="text-3xl md:text-5xl font-serif text-ink-900 mb-6 leading-tight">
-                  Nós somos a solução dos seus problemas!
+                  Construa com solidez e segurança.
                 </h2>
                 <p className="text-ink-700/80 font-light mb-10 leading-relaxed">
-                  Não importa o tipo de obra, nós executamos mantendo nossa política de entrega com qualidade e dentro de prazo e custos estabelecidos. Queremos soluções rápidas e eficazes para você!
+                  Temos a expertise técnica e comercial necessária para viabilizar e executar o seu projeto com excelência. Agende uma reunião com nossa diretoria e descubra como nossa engenharia pode agregar valor ao seu investimento.
                 </p>
                 
                 <div className="space-y-6">
@@ -462,7 +461,7 @@ export default function App() {
                     <textarea placeholder="Como podemos ajudar?" required rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} className="w-full bg-white border border-ink-900/10 px-4 py-3 text-sm focus:outline-none focus:border-gold-500 transition-colors resize-none"></textarea>
                   </div>
                   <button type="submit" className="w-full inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-ink-900 font-medium uppercase tracking-wider text-sm hover:bg-gold-400 transition-colors text-center">
-                    Enviar Mensagem via WhatsApp
+                    Solicitar Contato da Diretoria
                   </button>
                 </form>
               </div>
@@ -484,7 +483,7 @@ export default function App() {
           </div>
           
           <div className="text-sm font-light text-center md:text-left">
-            Todos os direitos reservados a BL Engenharia © {new Date().getFullYear()}
+            Todos os direitos reservados a BL Engenharia © 2022
           </div>
           
           <div className="flex gap-6 text-sm font-light">
